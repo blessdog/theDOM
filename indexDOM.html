@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>DOM vs JS</title>
+  </head>
+  <body>
+    <h1>Wanna find out what Shivoo mean?</h1>
+    <p>
+      To find out click the button below. The new window will close after 500ms
+      (aka: 5 seconds)
+    </p>
+    <button onclick="newWindow()">Curious?</button>
+    <script>
+      function newWindow() {
+        console.log("hi");
+        let url = "https://dictionary.com/browse/shivoo?s=t";
+        let newWindow = window.open(url, "", "width=500, height=800");
+        // Close window after 500ms
+        setTimeout(() => {
+          newWindow.close();
+        }, 5000);
+      }
+    </script>
+  </body>
+</html>
