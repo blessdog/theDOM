@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <style>
+      body {
+        text-align: center;
+      }
+      h1 {
+        color: rgb(115, 111, 136);
+      }
+      button {
+        cursor: pointer;
+        background-color: rgb(50, 39, 56);
+        color: peru;
+        width: 300px;
+        padding: 1em;
+        margin: 0.35em;
+      }
+    </style>
+    <title>DOM Access</title>
+  </head>
+  <body>
+    <h1>Test Yourself</h1>
+    <h2>getElementsByClassName()</h2>
+    <div>
+      <button onclick="green(this)" class="green">
+        Click to change this to green
+      </button>
+      <button onclick="blue(this)" class="blue">
+        Click to change this to blue
+      </button>
+      <button onclick="red(this)" class="red">
+        Click to change this to red
+      </button>
+      <button onclick="undo()" class="undo">Undo</button>
+    </div>
+    <script>
+      function green(btn) {
+        btn.style.backgroundColor = "green";
+        btn.style.color = "white";
+      }
+      function blue(btn) {
+        btn.style.backgroundColor = "blue";
+        btn.style.color = "white";
+      }
+      function red(btn) {
+        btn.style.backgroundColor = "red";
+        btn.style.color = "white";
+      }
+      function undo() {
+        const buttons = document.querySelectorAll("div > button");
+        // Loop throught each button and reset its color
+        for (const btn of buttons) {
+          btn.style.backgroundColor = "rgb(50, 39, 56)";
+          btn.style.color = "peru";
+        }
+      }
+    </script>
+  </body>
+</html>
