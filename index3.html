@@ -1,5 +1,21 @@
 <html>
     <head>
+        <style>
+            body {
+                text-align: center;
+            }
+            h1 {
+                color: azure;
+            }
+            button {
+            cursor: pointer;
+            background-color: purple;
+            width: 200px;
+            padding: 1em;
+            margin: 0.24em;
+            }
+
+        </style>
         <title>DOM Access</title>
     </head>
     <body>
@@ -16,26 +32,26 @@
            let originalColors = {};
 
             function green() {
-                const btn = document.getElementsByClassName('greenBtn');
+                const btn = document.getElementsByClassName('greenBtn')[0];
                 originalColors['greenBtn'] = btn.style.backgroundColor;
                 btn.style.backgroundColor = "green";
             }
 
             function blue() {
-                const btn = document.getElementsByClassName('blueBtn');
+                const btn = document.getElementsByClassName('blueBtn')[0];
                 originalColors['blueBtn'] = btn.style.backgroundColor;
                 btn.style.backgroundColor = "blue";
             }
 
             function red() {
-                const btn = document.getElementsByClassName('redBtn');
+                const btn = document.getElementsByClassName('redBtn')[0];
                 originalColors['redBtn'] = btn.style.backgroundColor;
                 btn.style.backgroundColor = "red";
             }
 
             function undo() {
-                for (let btnId in originalColors) {
-                    document.getElementsByClassName(btnId).style.backgroundColor = originalColors[btnId];
+                for (let btnClass in originalColors) {
+                    document.getElementsByClassName(btnClass)[0].style.backgroundColor = originalColors[btnClass];
                 }
             } 
 
