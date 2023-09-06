@@ -1,0 +1,36 @@
+<html>
+  <body>
+    <ul>
+      <li>BAM</li>
+      <li>POW</li>
+      <li>FLARP</li>
+      <li>FLARP</li>
+      <li>BANG</li>
+    </ul>
+    <script>
+      //******************* ELEMENT LIST
+
+      //   // access the list items
+      //   let listItems_tags = document.getElementsByTagName("li");
+      //   console.log(listItems_tags);
+      //   console.log(listItems_tags.length);
+
+      //   // lets modify the DOM and add a list item
+      //   listItems_tags[0].parentNode.appendChild(document.createElement("li"));
+      //   console.log(listItems_tags);
+      //   console.log(listItems_tags.length);
+
+      //******************* NODE LIST
+
+      let listItems = document.querySelectorAll("li");
+      // we can see it returns a Node List
+      console.log(listItems);
+      console.log(listItems.length);
+
+      // lets add to the list and prove that the NodeList is static
+      listItems[0].parentNode.appendChild(document.createElement("li"));
+      console.log(listItems);
+      console.log(listItems.length);
+    </script>
+  </body>
+</html>
