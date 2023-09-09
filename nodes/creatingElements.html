@@ -1,25 +1,29 @@
 <html>
-    <head>
-        <title>Creating Elements</title>
-        <style>
-            body {
-                background-color: 001d3d;
-                padding: 30px;
-            }
-            h1 {
-                color: teal;
-                font-family: sans-serif;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Am I teal?</h1>
-        <script>
-            let newElement = document.createElement('p');
-            // step 1. Lets grab the parent
-            let bodyElement = document.querySelector('body');
-            // stet 2. Lets now attach <p> to <body>
-            bodyElement.appendChild(newElement);
-        </script>
-    </body>
+  <head>
+    <title>Creating Elements</title>
+    <style>
+      body {
+        background-color: 001d3d;
+        padding: 50px;
+      }
+      h1 {
+        color: teal;
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Am I teal?</h1>
+    <script>
+      let newElement = document.createElement("p");
+      newElement.textContent = "Are you for reals?";
+      let newH1Element = document.createElement("h1");
+      newH1Element.textContent = "This is bananans";
+      // step 1. Lets grab the parent
+      let bodyElement = document.querySelector("body");
+      // stet 2. Lets now attach <p> to <body>
+      bodyElement.appendChild(newElement);
+      bodyElement.appendChild(newH1Element);
+    </script>
+  </body>
 </html>
