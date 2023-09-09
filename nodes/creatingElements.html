@@ -22,6 +22,12 @@
     <script>
       let newElement = document.createElement("p");
       newElement.textContent = "Are you for reals?";
+      // Lets grab the body & h1 tag
+      let h1Element = document.querySelector("h1");
+      let bodyElement = document.querySelector("body");
+      // Lets hack the insert BEFORE fucntion to insert AFTER
+      let h1NextElement = h1Element.nextElementSibling;
+      bodyElement.insertBefore(newElement, h1Element);
     </script>
   </body>
 </html>
