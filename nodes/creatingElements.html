@@ -28,6 +28,8 @@
       bodyElement.appendChild(newElement);
       // Now remove the newly added paragraph
       bodyElement.removeChild(newElement);
+      // remove this <p> from the DOM
+      newElement.parentNode.removeChild(newElement);
     </script>
   </body>
 </html>
