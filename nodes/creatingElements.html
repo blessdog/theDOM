@@ -20,14 +20,12 @@
   <body>
     <h1>Am I teal?</h1>
     <script>
+      // create new element
       let newElement = document.createElement("p");
       newElement.textContent = "Are you for reals?";
-      // Lets grab the body & h1 tag
-      let h1Element = document.querySelector("h1");
+      // add this new <p> element to the DOM
       let bodyElement = document.querySelector("body");
-      // Lets hack the insert BEFORE fucntion to insert AFTER
-      let h1NextElement = h1Element.nextElementSibling;
-      bodyElement.insertBefore(newElement, h1Element);
+      bodyElement.appendChild(newElement);
     </script>
   </body>
 </html>
