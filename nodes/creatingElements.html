@@ -27,8 +27,12 @@
       // step 1. Lets grab the parent
       let bodyElement = document.querySelector("body");
       // stet 2. Lets now attach <p> to <body> using appendChild
-      bodyElement.appendChild(newElement);
-      bodyElement.appendChild(newH1Element);
+      //   bodyElement.appendChild(newElement);
+      //   bodyElement.appendChild(newH1Element);
+      // Lets now append using insertBefore()
+      // 1. Find the sibling we want to precede
+      let scriptElement = document.querySelector("script");
+      bodyElement.insertBefore(newElement, scriptElement);
     </script>
   </body>
 </html>
