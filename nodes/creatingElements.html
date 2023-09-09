@@ -10,6 +10,11 @@
         color: teal;
         font-family: sans-serif;
       }
+      p {
+        color: teal;
+        font-size: 36px;
+        font-family: sans-serif;
+      }
     </style>
   </head>
   <body>
@@ -21,7 +26,7 @@
       newH1Element.textContent = "This is bananans";
       // step 1. Lets grab the parent
       let bodyElement = document.querySelector("body");
-      // stet 2. Lets now attach <p> to <body>
+      // stet 2. Lets now attach <p> to <body> using appendChild
       bodyElement.appendChild(newElement);
       bodyElement.appendChild(newH1Element);
     </script>
