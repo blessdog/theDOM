@@ -26,6 +26,8 @@
       // add this new <p> element to the DOM
       let bodyElement = document.querySelector("body");
       bodyElement.appendChild(newElement);
+      // Now remove the newly added paragraph
+      bodyElement.removeChild(newElement);
     </script>
   </body>
 </html>
