@@ -19,15 +19,17 @@
   </head>
   <body>
     <h1>Am I teal?</h1>
+    <p class="message">Am I a figment of your imagination?</p>
     <script>
-      // create new element
-      let newElement = document.createElement("p");
-      newElement.textContent = "Are you for reals?";
-      // add this new <p> element to the DOM
+      // lets grab our <body> element, as well as the item we want to clone
+      //which is the <p> element
       let bodyElement = document.querySelector("body");
-      bodyElement.appendChild(newElement);
-      // remove this <p> from the DOM
-      // newElement.remove();
+      let paraElelment = document.querySelector(".message");
+
+      // Define the sayWhat function
+      function sayWhat() {
+        let clonedText = paraElelment.cloneNode();
+      }
     </script>
   </body>
 </html>
