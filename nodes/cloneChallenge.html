@@ -37,11 +37,21 @@
         let animals = ["Dog", "Cat", "Warthog",
             "Eagle", "Elephant", "Giraffe", "Lion"
         ];
-
+        let ulElement = document.querySelector('ul');
         /*
           Add each animal name from the animals array 
           as a list item under the ul tag!
         */
+       for(let i = 0; i < animals.length; i++) {
+        // Create a new li element
+        let liElement = document.createElement("li");
+        
+        // Set the text content of the li to the current animal
+        liElement.textContent = animals[i];
+
+        // Append the li to the ul
+        ulElement.appendChild(liElement);
+       }
      
     </script>
 </body>
