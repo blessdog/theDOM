@@ -1,59 +1,67 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Dynamically Create List Items</title>
     <style>
-        h1 {
-            font-family: sans-serif;
-            font-size: 72px;
-            color: #CCC;
-            padding: 10px;
-            margin: 10px;
-        }
+      h1 {
+        font-family: sans-serif;
+        font-size: 72px;
+        color: #ccc;
+        padding: 10px;
+        margin: 10px;
+      }
 
-        ul {
-            padding: 0;
-            margin: 10px;
-        }
+      ul {
+        padding: 0;
+        margin: 10px;
+      }
 
-        li {
-            background-color: rgb(0, 255, 115);
-            max-width: 300px;
-            font-family: sans-serif;
-            list-style-type: none;
-            padding: 10px;
-            margin: 10px;
-            border-radius: 5px;
-        }
+      li {
+        background-color: rgb(0, 255, 115);
+        max-width: 300px;
+        font-family: sans-serif;
+        list-style-type: none;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 5px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Cool animals</h1>
     <ul></ul>
 
     <script>
-        let animals = ["Dog", "Cat", "Warthog",
-            "Eagle", "Elephant", "Giraffe", "Lion"
-        ];
-        let ulElement = document.querySelector('ul');
-        /*
+      let animals = [
+        "Dog",
+        "Cat",
+        "Warthog",
+        "Eagle",
+        "Elephant",
+        "Giraffe",
+        "Lion",
+      ];
+      let ulElement = document.querySelector("ul");
+      /*
           Add each animal name from the animals array 
           as a list item under the ul tag!
         */
-       for(let i = 0; i < animals.length; i++) {
-        // Create a new li element
-        let liElement = document.createElement("li");
-        
-        // Set the text content of the li to the current animal
-        liElement.textContent = animals[i];
+      for (const animal of animals) {
+        let listItem = document.createElement("li");
+        listItem.textContent = animal;
+        ulElement.appendChild(listItem);
+      }
+      //    for(let i = 0; i < animals.length; i++) {
+      //     // Create a new li element
+      //     let liElement = document.createElement("li");
 
-        // Append the li to the ul
-        ulElement.appendChild(liElement);
-       }
-     
+      //     // Set the text content of the li to the current animal
+      //     liElement.textContent = animals[i];
+
+      //     // Append the li to the ul
+      //     ulElement.appendChild(liElement);
+      //    }
     </script>
-</body>
-
+  </body>
 </html>
