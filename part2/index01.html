@@ -5,8 +5,10 @@
         // Step 1. Grab you button (Event Listener)
         let btn = document.querySelector('button');
         // Step 2. Add even and code to execute (Event Handler)
-        btn.onclick = () => {
-            alert('B OOM >!')
+        btn.addEventListener('click', boom);
+        // Step 3. Define boom fnx
+        function boom() {
+            alert('BOOOOOOOOOOOOOOOOOOOOm');
         }
         </script>
     </body>
